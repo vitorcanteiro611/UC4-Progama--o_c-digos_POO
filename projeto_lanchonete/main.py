@@ -1,18 +1,33 @@
+import os
+os.system('cls')
 from Pedido import Pedido
+from Cliente import Cliente  # type: ignore # Classe cliente foi importada da outra aba
+ 
+# 1. Primeiro, obsjeto cliente foi criado com os dados do cliente
+cliente_gabriel = Cliente(nome="Gabriel Cristaldo", celular="11 98888-7777")
 
-#criar um objeto - representar um elemento - dar valores
-novoPedido = Pedido(1, "2026-14-09", "21:10", "Gabriel", ["X salada", "X bacon"], "Pix")
+# 2. Agora, agora o objeto 'cliente_gabriel' dentro do construtor do Pedido
+novoPedido = Pedido(
+    numero=1, 
+    data="16/09/2026", 
+    hora="21:10", 
+    cliente=cliente_gabriel,  # Aqui entra o objeto cliente!
+    itens=["X-Salada", "X-Bacon"], 
+    pag="Pix"
+)
 
-#O que eu posso fazer com o objeto? - Ações - Métodos
-#acessar um atributo do objeto
-print(novoPedido.numero)
-print(novoPedido.status)
+# ------------------------------------------------------------------#
 
-#alterar os dados de um atibuto.
-novoPedido.cliente="Gabriel Cristaldo"
-print(novoPedido.cliente)
+# Acessar um atributo do objeto
+print(f"Número do pedido: {novoPedido.numero}")
+print(f"Status inicial: {novoPedido.status}")
 
-#chamando os métodos.
+# Chamando os métodos (as ações que o def guardou)
 novoPedido.imprimir()
+
+print("\n--- Atualizando o status ---")
+# Forma correta (passando pelo botão 'def' que você criou):
 novoPedido.atualizar_Pedido("Em preparo")
-novoPedido.status = "Em preparo"
+
+# Mostrando o status atualizado
+print(f"Status atual: {novoPedido.status}")

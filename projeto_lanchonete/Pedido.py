@@ -20,6 +20,5 @@ class Pedido:
     def imprimir(self):             
         print(f"\n--------Pedido n {self.numero} ----------- ", self.numero)
         print(f"\nData: {self.data} - Hora: {self.hora} |")
-        print(f"\nCliente;{self.cliente} | Pagamento: {self.pagamento}")
-        
+        print(f"\nCliente;{self.cliente.nome} | Pagamento: {self.pagamento}")
         
