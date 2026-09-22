@@ -20,7 +20,9 @@ novoPedido = Pedido(
 
 # Acessar um atributo do objeto
 print(f"Número do pedido: {novoPedido.numero}")
+      
 print(f"Status inicial: {novoPedido.status}")
+
 
 # Chamando os métodos (as ações que o def guardou)
 novoPedido.imprimir()
@@ -31,3 +33,5 @@ novoPedido.atualizar_Pedido("Em preparo")
 
 # Mostrando o status atualizado
 print(f"Status atual: {novoPedido.status}")
+#print('-'*5) para colocar o numero de linhas
+
