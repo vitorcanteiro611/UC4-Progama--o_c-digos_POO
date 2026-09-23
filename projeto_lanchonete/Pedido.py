@@ -18,9 +18,12 @@ class Pedido:
         self.status=novoStatus
 
     def imprimir(self):             
-        print(f"\n--------Pedido n {self.numero} ----------- ", self.numero)
-        print(f"\nData: {self.data} - Hora: {self.hora} |")
-        print(f"\nCliente:{self.cliente.nome} | Pagamento: {self.pagamento}")
-        print(f'\n')
+        print(f"\n--------Pedido n° {self.numero} ----------- "
+              f"\nData: {self.data}" 
+              f"\nHora: {self.hora}"
+              f"\nCliente:{self.cliente.nome}" 
+              f"\nPagamento: {self.pagamento}"
+              f"\nTelefone:{self.cliente.getTelefone()}"
+            )
 
         
